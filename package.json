@@ -33,6 +33,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
     "husky": "^4.2.1",
+    "prettier": "^1.19.1",
     "typescript": "^3.7.5"
   }
 }
