@@ -1,0 +1,29 @@
+{
+  "name": "jest-matchmedia-mock",
+  "description": "Mock for fully testing any media queries with Jest",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Kirill Dyakov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyakovk/jest-matchmedia-mock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dyakovk/jest-matchmedia-mock/issues"
+  },
+  "homepage": "https://github.com/dyakovk/jest-matchmedia-mock#readme",
+  "keywords": [
+    "jest",
+    "mock",
+    "jest-mock",
+    "jest-matchmedia",
+    "matchmedia-mock",
+    "window.matchmedia",
+    "mediaquery",
+    "media query mock",
+    "typescript"
+  ],
+  "files": [
+    "dist/"
+  ]
+}
