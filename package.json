@@ -32,6 +32,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^25.1.1",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "eslint": "^6.8.0",
@@ -43,6 +44,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
+    "ts-jest": "^24.3.0",
     "typescript": "^3.7.5"
   }
 }
