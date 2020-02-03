@@ -27,7 +27,8 @@
     "dist/"
   ],
   "scripts": {
-    "lint": "eslint ./src/ --ext ts"
+    "lint": "eslint ./src/ --ext ts",
+    "test": "jest ./src/ --config ./jest.config.json"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
