@@ -1,6 +1,12 @@
 # 🔌 MatchMedia Mock for Jest
 
-[build:passing][coverage:100%][downloads:2M/month][dependencies:up to date][vulnerabilities:0][typescript:100%][node:10+][jest:*]
+![Travis (.org)](https://img.shields.io/travis/dyakovk/jest-matchmedia-mock)
+![Coveralls github](https://img.shields.io/coveralls/github/dyakovk/jest-matchmedia-mock)
+![npm](https://img.shields.io/npm/dw/jest-matchmedia-mock)
+![GitHub top language](https://img.shields.io/github/languages/top/dyakovk/jest-matchmedia-mock?label=typescript&logo=typescript)
+![npm type definitions](https://img.shields.io/npm/types/jest-matchmedia-mock)
+![node](https://img.shields.io/node/v/jest-matchmedia-mock)
+![npm peer dependency version](https://img.shields.io/npm/dependency-version/jest-matchmedia-mock/peer/jest)
 
 >
 
