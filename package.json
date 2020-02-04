@@ -23,6 +23,11 @@
     "media query mock",
     "typescript"
   ],
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "./dist/matchmedia-mock.js",
+  "types": "./dist/matchmedia-mock.d.ts",
   "files": [
     "dist/"
   ],
