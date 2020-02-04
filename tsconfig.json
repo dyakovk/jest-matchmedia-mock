@@ -18,7 +18,5 @@
     "noFallthroughCasesInSwitch": true,
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["**/*.test.ts"]
+  }
 }
