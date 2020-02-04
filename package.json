@@ -35,7 +35,8 @@
     "compile": "rimraf ./dist/ && tsc -p ./tsconfig.prod.json",
     "coverage": "jest --config ./jest.config.json --coverage --coverageReporters=text",
     "lint": "eslint ./src/ --ext ts",
-    "test": "jest ./src/ --config ./jest.config.json"
+    "test": "jest ./src/ --config ./jest.config.json",
+    "test:coveralls": "jest --config ./jest.config.json --coverage --coverageReporters=text-lcov | coveralls"
   },
   "peerDependencies": {
     "jest": ">=13"
