@@ -27,7 +27,7 @@
     "dist/"
   ],
   "scripts": {
-    "compile": "tsc",
+    "compile": "rimraf ./dist/ && tsc",
     "lint": "eslint ./src/ --ext ts",
     "test": "jest ./src/ --config ./jest.config.json"
   },
