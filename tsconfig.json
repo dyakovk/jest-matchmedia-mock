@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
     // Build options
-    "target": "es2017",
+    "outDir": "./dist/",
+    "target": "es2018", // Node 10
     "module": "CommonJS",
-    "declaration": false,
-    "removeComments": true,
+    "declaration": true,
+    "removeComments": false,
+    "sourceMap": false,
     // Module Resolution Options
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -16,5 +18,7 @@
     "noFallthroughCasesInSwitch": true,
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.test.ts"]
 }
