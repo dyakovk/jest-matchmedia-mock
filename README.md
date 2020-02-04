@@ -8,7 +8,7 @@
 ![node](https://img.shields.io/node/v/jest-matchmedia-mock)
 ![npm peer dependency version](https://img.shields.io/npm/dependency-version/jest-matchmedia-mock/peer/jest)
 
-> Mock implementation of the `window.matchMedia` method that we have been waiting for so long while working with Jest 🃏
+> Mock implementation of the `window.matchMedia` method that we have been waiting for so long while working with Jest
 >
 > This allows you to control your media queries and their listening functions. You can update the media query that is currently applied to the document by calling a single function. Try it!
 
