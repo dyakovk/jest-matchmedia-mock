@@ -1,4 +1,4 @@
-# 🔌 MatchMedia Mock for Jest
+# 🃏 MatchMedia Mock for Jest
 
 ![Travis (.org)](https://img.shields.io/travis/dyakovk/jest-matchmedia-mock)
 ![Coveralls github](https://img.shields.io/coveralls/github/dyakovk/jest-matchmedia-mock)
@@ -8,9 +8,7 @@
 ![node](https://img.shields.io/node/v/jest-matchmedia-mock)
 ![npm peer dependency version](https://img.shields.io/npm/dependency-version/jest-matchmedia-mock/peer/jest)
 
-> Mock implementation of the `window.matchMedia` method that we have been waiting for so long while working with Jest
->
-> This allows you to control your media queries and their listening functions. You can update the media query that is currently applied to the document by calling a single function. Try it!
+This implementation of the `window.matchMedia` method allows you to control your media queries and their listening functions. You can update the media query that is currently applied to the document by simply calling one function.
 
 ## Installation
 
@@ -80,7 +78,7 @@ Implements `window.matchMedia` and returns an instance with methods listed below
 
 ### `matchMedia.useMediaQuery()`
 
-Updates the currently used media query, and calls previously added listener functions registered for this media query
+Updates the currently used media query, and calls previously added listener functions registered for the passed media query
 
 - Arguments:
 
@@ -94,9 +92,9 @@ Returns an array listing the media queries for which the matchMedia has register
 
 - Returns: `string[]`
 
-### `matchMedia.getListeners(mediaQuery)`
+### `matchMedia.getListeners()`
 
-Returns a copy of the array of listeners for the specified media query
+Returns a copy of the array of listeners for the passed media query
 
 - Arguments:
 
