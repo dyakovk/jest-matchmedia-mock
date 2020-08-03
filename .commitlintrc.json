@@ -4,22 +4,7 @@
     "type-enum": [
       2,
       "always",
-      [
-        "build",
-        "chore",
-        "ci",
-        "devtool",
-        "docs",
-        "feat",
-        "fix",
-        "improvement",
-        "perf",
-        "refactor",
-        "revert",
-        "style",
-        "test",
-        "wip"
-      ]
+      ["build", "chore", "ci", "devtool", "docs", "feat", "fix", "perf", "refactor", "revert", "style", "test"]
     ],
     "body-leading-blank": [2, "always"],
     "footer-leading-blank": [2, "always"]
