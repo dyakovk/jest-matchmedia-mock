@@ -8,6 +8,7 @@
         "build",
         "chore",
         "ci",
+        "devtool",
         "docs",
         "feat",
         "fix",
@@ -17,7 +18,6 @@
         "revert",
         "style",
         "test",
-        "workflow",
         "wip"
       ]
     ],
