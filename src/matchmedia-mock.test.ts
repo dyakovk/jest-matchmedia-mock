@@ -32,7 +32,7 @@ describe('MatchMedia Mock', () => {
       const listener = jest.fn();
       const mql = window.matchMedia(appearanceMq.light);
 
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       mql.addEventListener<'click'>('click', listener);
 
@@ -72,7 +72,7 @@ describe('MatchMedia Mock', () => {
       const mql = window.matchMedia(appearanceMq.light);
 
       mql.addEventListener<'change'>('change', listener);
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       mql.removeEventListener<'click'>('click', listener);
 
@@ -108,7 +108,7 @@ describe('MatchMedia Mock', () => {
   describe('Calling Listeners', () => {
     test('throws an error when an applicable media query is not a string', () => {
       expect(() => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         matchMedia.useMediaQuery(true);
       }).toThrow();
