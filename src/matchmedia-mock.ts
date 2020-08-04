@@ -21,11 +21,11 @@ export default class MatchMedia {
           media: query,
           onchange: null,
           /** @deprecated */
-          addListener: listener => {
+          addListener: (listener) => {
             this.addListener(query, listener);
           },
           /** @deprecated */
-          removeListener: listener => {
+          removeListener: (listener) => {
             this.removeListener(query, listener);
           },
           addEventListener: <K extends keyof MediaQueryListEventMap>(
@@ -101,7 +101,7 @@ export default class MatchMedia {
       media: mediaQuery,
     };
 
-    this.mediaQueries[mediaQuery].forEach(listener => {
+    this.mediaQueries[mediaQuery].forEach((listener) => {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       listener!.call(this.mediaQueryList, mqListEvent as MediaQueryListEvent);
     });

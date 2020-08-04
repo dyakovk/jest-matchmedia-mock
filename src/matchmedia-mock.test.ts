@@ -126,8 +126,8 @@ describe('MatchMedia Mock', () => {
 
       const mql = window.matchMedia(appearanceMq.light);
 
-      mql.addListener(ev => ev.matches && firstListener());
-      mql.addListener(ev => ev.matches && secondListener());
+      mql.addListener((ev) => ev.matches && firstListener());
+      mql.addListener((ev) => ev.matches && secondListener());
 
       matchMedia.useMediaQuery(appearanceMq.light);
 
