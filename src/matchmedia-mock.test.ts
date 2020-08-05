@@ -121,8 +121,8 @@ describe('MatchMedia Mock', () => {
     });
 
     test('calls listener functions when applying a media query with previously registered listeners', () => {
-      const firstListener = jest.fn();
-      const secondListener = jest.fn();
+      const firstListener = jest.fn<void, []>();
+      const secondListener = jest.fn<void, []>();
 
       const mql = window.matchMedia(appearanceMq.light);
 
