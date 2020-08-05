@@ -1,6 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+interface MediaQueryList {
+  readonly matches: boolean;
+  readonly media: string;
+  onchange: MediaQueryListener | null;
+  /** @deprecated */
+  addListener(listener: MediaQueryListener): void;
+  /** @deprecated */
+  removeListener(listener: MediaQueryListener): void;
+  addEventListener(type: 'change', listener: MediaQueryListener): void;
+  removeEventListener(type: 'change', listener: MediaQueryListener): void;
+  dispatchEvent(event: Event): boolean;
+}
 
-type MediaQueryListener = ((this: MediaQueryList, ev: MediaQueryListEvent) => any) | null;
+type MediaQueryListener = (this: MediaQueryList, ev: MediaQueryListEvent) => void;
 
 export default class MatchMedia {
   private mediaQueries: {
@@ -16,30 +27,22 @@ export default class MatchMedia {
       writable: true,
       configurable: true,
       value: (query: string): MediaQueryList => {
-        const mql: MediaQueryList = {
+        this.mediaQueryList = {
           matches: query === this.currentMediaQuery,
           media: query,
           onchange: null,
-          /** @deprecated */
           addListener: (listener) => {
             this.addListener(query, listener);
           },
-          /** @deprecated */
           removeListener: (listener) => {
             this.removeListener(query, listener);
           },
-          addEventListener: <K extends keyof MediaQueryListEventMap>(
-            type: K,
-            listener: (this: MediaQueryList, ev: MediaQueryListEventMap[K]) => any,
-          ) => {
+          addEventListener: (type, listener) => {
             if (type !== 'change') return;
 
             this.addListener(query, listener);
           },
-          removeEventListener: <K extends keyof MediaQueryListEventMap>(
-            type: K,
-            listener: (this: MediaQueryList, ev: MediaQueryListEventMap[K]) => any,
-          ) => {
+          removeEventListener: (type, listener) => {
             if (type !== 'change') return;
 
             this.removeListener(query, listener);
@@ -47,9 +50,7 @@ export default class MatchMedia {
           dispatchEvent: jest.fn(),
         };
 
-        this.mediaQueryList = mql;
-
-        return mql;
+        return this.mediaQueryList;
       },
     });
   }
@@ -102,8 +103,7 @@ export default class MatchMedia {
     };
 
     this.mediaQueries[mediaQuery].forEach((listener) => {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      listener!.call(this.mediaQueryList, mqListEvent as MediaQueryListEvent);
+      listener.call(this.mediaQueryList, mqListEvent as MediaQueryListEvent);
     });
   }
 
