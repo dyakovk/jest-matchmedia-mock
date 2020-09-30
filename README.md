@@ -46,8 +46,8 @@ describe('Your testing module' => {
     const secondListener = jest.fn();
     const mql = window.matchMedia(mediaQuery);
 
-    mql.addListener(ev => ev.matches && firstListener());
-    mql.addListener(ev => ev.matches && secondListener());
+    mql.addEventListener("change", ev => ev.matches && firstListener());
+    mql.addEventListener("change", ev => ev.matches && secondListener());
 
     matchMedia.useMediaQuery(mediaQuery);
 
