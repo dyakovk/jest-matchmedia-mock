@@ -150,6 +150,7 @@ describe('MatchMedia Mock', () => {
 
       matchMedia.clear();
 
+      expect(mql.matches).toBe(false);
       expect(matchMedia.getMediaQueries()).toHaveLength(0);
       expect(matchMedia.getListeners(appearanceMq.light)).toHaveLength(0);
     });
