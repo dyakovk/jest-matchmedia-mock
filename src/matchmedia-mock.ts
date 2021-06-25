@@ -130,7 +130,7 @@ export default class MatchMedia {
    */
   public clear(): void {
     this.mediaQueries = {};
-    this.currentMediaQuery = 'undefined';
+    this.currentMediaQuery = '';
   }
 
   /**
